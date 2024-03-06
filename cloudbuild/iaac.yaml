@@ -1,0 +1,27 @@
+steps:
+  - id: "Variable Substitution"
+    name: alpine
+    entrypoint: sh
+    args:
+      [
+        "/workspace/cloudbuild/scripts/variable-substitution.sh",
+        "${PROJECT_ID}",
+        "${BRANCH_NAME}",
+      ]
+
+  - id: "Init"
+    name: hashicorp/terraform:1.0.0
+    entrypoint: sh
+    args: ["/workspace/cloudbuild/scripts/tf-init.sh", "${BRANCH_NAME}"]
+
+  - id: "Plan"
+    name: hashicorp/terraform:1.0.0
+    entrypoint: sh
+    args: ["/workspace/cloudbuild/scripts/tf-plan.sh", "${BRANCH_NAME}"]
+
+  - id: "Apply"
+    name: hashicorp/terraform:1.0.0
+    entrypoint: sh
+    args: ["/workspace/cloudbuild/scripts/tf-apply.sh", "${BRANCH_NAME}"]
+logsBucket: gs://lengaqu-build-logs
+timeout: 2000s
