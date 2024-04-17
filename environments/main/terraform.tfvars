@@ -1,6 +1,6 @@
 location   = "EU"
-region     = "europe-west1"
-zone_id    = "europe-west1-c"
+region     = "europe-west3"
+zone_id    = "europe-west3-a"
 workspace  = "production"
 project_id = "<INFRA_PROJECT_ID>"
 project_services = [
