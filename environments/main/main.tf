@@ -15,5 +15,8 @@ provider "google-beta" {
 ###########
 
 module "blackpaw" {
-  source = "../../modules/blackpaw"
+  source           = "../../modules/blackpaw"
+  project_id       = var.project_id
+  region           = var.region
+  project_services = var.project_services
 }
