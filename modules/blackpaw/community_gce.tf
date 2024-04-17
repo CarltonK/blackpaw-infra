@@ -8,4 +8,6 @@ module "blackpaw" {
     "odoo",
     "community"
   ]
+
+  depends_on = [ google_project_service.blackpaw-services ]
 }

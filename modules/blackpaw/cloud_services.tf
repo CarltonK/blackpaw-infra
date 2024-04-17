@@ -1,4 +1,4 @@
-resource "google_project_service" "lengaqu-services" {
+resource "google_project_service" "blackpaw-services" {
   count              = length(var.project_services)
   service            = var.project_services[count.index]
   provider           = google-beta
