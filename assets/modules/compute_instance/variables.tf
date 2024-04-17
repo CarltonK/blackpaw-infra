@@ -20,12 +20,10 @@ variable "machine_type" {
   default     = "f1-micro"
 }
 
-variable "zone_id" {
-  type        = string
-  description = "Zone within region"
-}
-
-
 variable "instance_tags" {
   type = list(string)
+}
+
+variable "startup_script" {
+  description = "The startup script to be executed on the instance"
 }
