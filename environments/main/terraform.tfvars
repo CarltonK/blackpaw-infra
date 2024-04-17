@@ -5,5 +5,6 @@ workspace  = "production"
 project_id = "<INFRA_PROJECT_ID>"
 project_services = [
   "cloudbuild.googleapis.com",
-  "compute.googleapis.com"
+  "compute.googleapis.com",
+  "iam.googleapis.com"
 ]
