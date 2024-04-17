@@ -12,3 +12,8 @@ variable "project_services" {
   type        = list(string)
   description = "Enabled project services"
 }
+
+variable "zone_id" {
+  type        = string
+  description = "Zone within region"
+}
