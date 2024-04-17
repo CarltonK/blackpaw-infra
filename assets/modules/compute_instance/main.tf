@@ -1,7 +1,7 @@
 # #######
 # # GCE #
 # #######
-resource "google_compute_instance" "odoo_instance" {
+resource "google_compute_instance" "default_instance" {
   project      = var.project_id
   name         = var.name
   machine_type = var.machine_type
