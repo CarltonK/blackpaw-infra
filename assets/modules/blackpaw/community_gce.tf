@@ -8,7 +8,7 @@ module "compute_instance" {
     "odoo",
     "community"
   ]
-  startup_script = file("${path.root}/assets/templates/odoo_setup.sh")
+  startup_script = file("../../assets/scripts/odoo_setup.sh")
 
   depends_on = [google_project_service.blackpaw-services]
 }
