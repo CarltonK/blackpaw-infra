@@ -7,5 +7,7 @@ project_services = [
   "cloudbuild.googleapis.com",
   "compute.googleapis.com",
   "iam.googleapis.com",
-  "cloudresourcemanager.googleapis.com"
+  "cloudresourcemanager.googleapis.com",
+  "domains.googleapis.com",
+  "dns.googleapis.com"
 ]
