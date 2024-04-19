@@ -2,7 +2,7 @@ module "compute_instance" {
   source       = "../compute_instance"
   project_id   = var.project_id
   name         = "blackpaw-community"
-  machine_type = "n1-standard-1"
+  machine_type = "e2-standard-2"
   instance_tags = [
     "blackpaw",
     "odoo",
