@@ -12,7 +12,7 @@ resource "google_compute_instance" "default_instance" {
     }
   }
 
-  metadata_startup_script = var.startup_script
+  # metadata_startup_script = var.startup_script
 
   tags = var.instance_tags
 
