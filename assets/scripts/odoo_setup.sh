@@ -24,7 +24,7 @@ sudo -u postgres psql -c "CREATE USER odoo WITH PASSWORD 'odoo'; ALTER USER odoo
 sudo apt install -y wkhtmltopdf
 
 # Clone Odoo repository
-sudo git clone https://www.github.com/odoo/odoo --depth 1 --branch 17.0 /opt/odoo
+sudo git clone https://www.github.com/odoo/odoo --depth 1 --branch 16.0 /opt/odoo
 
 # Install Python dependencies
 sudo pip3 install -r /opt/odoo/requirements.txt
