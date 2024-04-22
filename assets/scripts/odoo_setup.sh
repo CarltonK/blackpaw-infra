@@ -7,7 +7,7 @@ sudo apt upgrade -y
 # Install dependencies
 sudo apt install -y git python3-pip build-essential python3-dev python3-wheel libxslt-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools python3-psycopg2 nodejs npm software-properties-common
 
-# Add Python3.10
+# Add Python3.10 - If using Debian 11 and below
 # yes | sudo add-apt-repository ppa:deadsnakes/ppa
 # sudo apt install python3.10 python3-pip
 
@@ -31,7 +31,7 @@ sudo apt install -y wkhtmltopdf
 sudo git clone https://www.github.com/odoo/odoo --depth 1 --branch 17.0 /opt/odoo
 
 # Install Python dependencies
-sudo pip3 install -r /opt/odoo/requirements.txt
+sudo pip3 install -r /opt/odoo/requirements.txt --break-system-packages
 
 # Create Odoo configuration file
 sudo cp /opt/odoo/debian/odoo.conf /etc/odoo.conf
