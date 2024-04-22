@@ -17,3 +17,17 @@ variable "zone_id" {
   type        = string
   description = "Zone within region"
 }
+
+variable "operator_custom_role_permissions" {
+  type = list(string)
+  default = [
+    // Compute Admin
+    
+  ]
+  description = "Defines permission set of custom operator role"
+}
+
+variable "ops_users" {
+  type        = list(string)
+  description = "List of users with Ops permission set"
+}

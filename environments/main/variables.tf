@@ -27,3 +27,8 @@ variable "project_services" {
   type        = list(string)
   description = "Enabled project services"
 }
+
+variable "ops_users" {
+  type        = list(string)
+  description = "List of users with Ops permission set"
+}

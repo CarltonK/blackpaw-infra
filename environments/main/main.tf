@@ -20,4 +20,5 @@ module "blackpaw" {
   region           = var.region
   project_services = var.project_services
   zone_id          = var.zone_id
+  ops_users        = var.ops_users
 }

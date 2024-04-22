@@ -11,3 +11,6 @@ project_services = [
   "domains.googleapis.com",
   "dns.googleapis.com"
 ]
+ops_users = [
+  "adrian@blackpawinnovations.com"
+]
