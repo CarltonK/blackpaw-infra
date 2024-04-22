@@ -5,7 +5,11 @@ sudo apt update
 sudo apt upgrade -y
 
 # Install dependencies
-sudo apt install -y git python3-pip build-essential python3-dev python3-wheel libxslt-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools python3-psycopg2 nodejs npm
+sudo apt install -y git python3-pip build-essential python3-dev python3-wheel libxslt-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools python3-psycopg2 nodejs npm software-properties-common
+
+# Add Python3.10
+yes | sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.10 python3-pip
 
 # Install PostgreSQL
 sudo apt install -y postgresql
@@ -24,7 +28,7 @@ sudo -u postgres psql -c "CREATE USER odoo WITH PASSWORD 'odoo'; ALTER USER odoo
 sudo apt install -y wkhtmltopdf
 
 # Clone Odoo repository
-sudo git clone https://www.github.com/odoo/odoo --depth 1 --branch 16.0 /opt/odoo
+sudo git clone https://www.github.com/odoo/odoo --depth 1 --branch 17.0 /opt/odoo
 
 # Install Python dependencies
 sudo pip3 install -r /opt/odoo/requirements.txt
