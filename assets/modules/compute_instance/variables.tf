@@ -11,7 +11,7 @@ variable "name" {
 variable "image" {
   type        = string
   description = "Compute Instance Image Type"
-  default     = "debian-cloud/debian-11"
+  default     = "debian-cloud/debian-12"
 }
 
 variable "machine_type" {

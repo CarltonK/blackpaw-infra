@@ -8,8 +8,8 @@ sudo apt upgrade -y
 sudo apt install -y git python3-pip build-essential python3-dev python3-wheel libxslt-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools python3-psycopg2 nodejs npm software-properties-common
 
 # Add Python3.10
-yes | sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt install python3.10 python3-pip
+# yes | sudo add-apt-repository ppa:deadsnakes/ppa
+# sudo apt install python3.10 python3-pip
 
 # Install PostgreSQL
 sudo apt install -y postgresql
