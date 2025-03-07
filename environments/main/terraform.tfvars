@@ -9,7 +9,8 @@ project_services = [
   "iam.googleapis.com",
   "cloudresourcemanager.googleapis.com",
   "domains.googleapis.com",
-  "dns.googleapis.com"
+  "dns.googleapis.com",
+  "drive.googleapis.com"
 ]
 ops_users = [
   "adrian@blackpawinnovations.com"
