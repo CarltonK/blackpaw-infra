@@ -14,11 +14,11 @@ provider "google-beta" {
 # MODULES #
 ###########
 
-module "blackpaw" {
-  source           = "../../assets/modules/blackpaw"
-  project_id       = var.project_id
-  region           = var.region
-  project_services = var.project_services
-  zone_id          = var.zone_id
-  ops_users        = var.ops_users
-}
+# module "blackpaw" {
+#   source           = "../../assets/modules/blackpaw"
+#   project_id       = var.project_id
+#   region           = var.region
+#   project_services = var.project_services
+#   zone_id          = var.zone_id
+#   ops_users        = var.ops_users
+# }
