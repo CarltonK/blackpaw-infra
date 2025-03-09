@@ -26,4 +26,5 @@ variable "instance_tags" {
 
 variable "startup_script" {
   description = "The startup script to be executed on the instance"
+  default     = "echo 1"
 }
