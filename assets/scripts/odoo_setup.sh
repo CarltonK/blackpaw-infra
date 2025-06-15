@@ -19,10 +19,10 @@ sudo groupadd -r odoo
 sudo useradd -r -g odoo odoo
 
 # Set the password for the 'postgres' user to 'odoo'
-echo "postgres:odoo" | sudo chpasswd
+echo "postgres:UNIQUE-PASSWORD-HERE" | sudo chpasswd
 
 # Switch to postgres user to execute PostgreSQL commands
-sudo -u postgres psql -c "CREATE USER odoo WITH PASSWORD 'odoo'; ALTER USER odoo WITH CREATEDB;"
+sudo -u postgres psql -c "CREATE USER odoo WITH PASSWORD 'second-UNIQUE-PASSWORD-HERE'; ALTER USER odoo WITH CREATEDB;"
 
 # Install Wkhtmltopdf
 sudo apt install -y wkhtmltopdf
@@ -68,7 +68,9 @@ sudo systemctl start odoo
 sudo systemctl enable odoo
 
 # Adjust firewall settings
-# sudo ufw allow 8069
+sudo ufw allow 8069
+
+SERVER_IP=$(curl -s https://ipinfo.io/ip)
 
 echo "Odoo has been successfully installed and configured."
-echo "You can access Odoo by navigating to http://your_server_ip:8069 in a web browser."
+echo "You can access Odoo by navigating to http://$SERVER_IP:8069 in a web browser."
