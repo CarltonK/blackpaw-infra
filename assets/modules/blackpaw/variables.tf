@@ -31,3 +31,8 @@ variable "ops_users" {
   type        = list(string)
   description = "List of users with Ops permission set"
 }
+
+variable "ops_roles" {
+  type        = list(string)
+  description = "List of roles in Ops permission set"
+}
