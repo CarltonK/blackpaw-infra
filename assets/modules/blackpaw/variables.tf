@@ -22,7 +22,7 @@ variable "operator_custom_role_permissions" {
   type = list(string)
   default = [
     // Compute Admin
-    
+
   ]
   description = "Defines permission set of custom operator role"
 }
@@ -35,4 +35,7 @@ variable "ops_users" {
 variable "ops_roles" {
   type        = list(string)
   description = "List of roles in Ops permission set"
+  default = [
+    "roles/compute.admin"
+  ]
 }

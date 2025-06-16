@@ -21,5 +21,4 @@ module "blackpaw" {
   project_services = var.project_services
   zone_id          = var.zone_id
   ops_users        = var.ops_users
-  ops_roles        = var.ops_roles
 }

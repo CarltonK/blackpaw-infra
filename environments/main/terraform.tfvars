@@ -16,6 +16,3 @@ project_services = [
 ops_users = [
   "adrian@blackpawinnovations.com"
 ]
-ops_roles = [
-  "roles/compute.admin"
-]
