@@ -41,10 +41,3 @@ resource "google_project_iam_member" "ops_user_roles" {
   role    = each.value.role
   member  = "user:${each.value.user}"
 }
-
-resource "google_project_iam_member" "ops_compute_admin_role" {
-  count   = length(var.ops_users)
-  project = var.project_id
-  role    = "roles/compute.admin"
-  member  = "user:${element(var.ops_users, count.index)}"
-}
