@@ -40,7 +40,7 @@ Set up secure SSH key access using this guide:
 ## 🐍 3. Odoo Installation
 This repository includes a setup script to fully automate the Odoo 17 Community Edition installation process.
 
-### 📁 Script Location:
+### 📁 Script Location: /assets/scripts/odoo_setup.sh
 ```bash
 chmod +x ./assets/scripts/odoo_setup.sh
 ./assets/scripts/odoo_setup.sh
@@ -58,23 +58,19 @@ To install additional community modules (addons):
 
 🧰 Step-by-Step:
 1. Download the module to your local PC
-
 2. Copy the module to the VM
 ```bash
 scp Downloads/CUSTOM_MODULE blackpaw@VM_IP_HERE:/home/blackpaw
 ```
-
 3. Unzip the module into the custom Odoo addons folder (/opt/odoo/addons)
 ```bash
 apt install unzip # If unzip is not installed
 unzip CUSTOM_MODULE -d /opt/odoo/addons
 ```
-
 4. Restart Odoo
 ```bash
 sudo systemctl restart odoo
 ```
-
 5. Update the App List
     1. Login to the Odoo web interface
     2. Go to Apps
