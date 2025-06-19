@@ -21,6 +21,12 @@ Follow the DigitalOcean guide below to create a **non-root user** with `sudo` pr
 
 > ⚠️ Replace `ubuntu` with `debian` where applicable.
 
+
+If ufw is not installed, then install with
+```bash
+apt install ufw
+```
+
 ---
 
 ## 🔐 2. SSH Key Authentication
@@ -39,6 +45,7 @@ This repository includes a setup script to fully automate the Odoo 17 Community 
 
 ### 📁 Script Location:
 ```bash
+chmod +x ./assets/scripts/odoo_setup.sh
 ./assets/scripts/odoo_setup.sh
 ```
 
