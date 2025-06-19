@@ -14,5 +14,6 @@ project_services = [
   "secretmanager.googleapis.com"
 ]
 ops_users = [
-  "adrian@blackpawinnovations.com"
+  "adrian@blackpawinnovations.com",
+  "benotieno9@gmail.com"
 ]
