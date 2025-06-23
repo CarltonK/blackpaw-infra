@@ -10,17 +10,17 @@ steps:
       ]
 
   - id: "Init"
-    name: hashicorp/terraform:1.8.1
+    name: hashicorp/terraform:1.12.2
     entrypoint: sh
     args: ["/workspace/cloudbuild/scripts/tf-init.sh", "${BRANCH_NAME}"]
 
   - id: "Plan"
-    name: hashicorp/terraform:1.8.1
+    name: hashicorp/terraform:1.12.2
     entrypoint: sh
     args: ["/workspace/cloudbuild/scripts/tf-plan.sh", "${BRANCH_NAME}"]
 
   - id: "Apply"
-    name: hashicorp/terraform:1.8.1
+    name: hashicorp/terraform:1.12.2
     entrypoint: sh
     args: ["/workspace/cloudbuild/scripts/tf-apply.sh", "${BRANCH_NAME}"]
 logsBucket: gs://blackpaw-build-logs
