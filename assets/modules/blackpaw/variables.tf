@@ -8,6 +8,12 @@ variable "region" {
   description = "Region containing assets"
 }
 
+variable "location" {
+  type        = string
+  description = "Location containing assets"
+  default     = "eur3"
+}
+
 variable "project_services" {
   type        = list(string)
   description = "Enabled project services"
