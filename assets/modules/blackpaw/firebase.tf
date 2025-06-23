@@ -11,5 +11,8 @@ resource "google_firestore_database" "default" {
   concurrency_mode            = "OPTIMISTIC"
   app_engine_integration_mode = "DISABLED"
 
-  depends_on = [google_firebase_project.firebase_project]
+  depends_on = [
+    google_firebase_project.firebase_project,
+    google_project_service.blackpaw-services
+  ]
 }
