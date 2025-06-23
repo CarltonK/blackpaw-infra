@@ -13,7 +13,9 @@ project_services = [
   "drive.googleapis.com",
   "secretmanager.googleapis.com",
   "firebase.googleapis.com",
-  "firestore.googleapis.com"
+  "firestore.googleapis.com",
+  "secretmanager.googleapis.com",
+  "cloudfunctions.googleapis.com"
 ]
 ops_users = [
   "adrian@blackpawinnovations.com",
