@@ -23,5 +23,5 @@ steps:
     name: hashicorp/terraform:1.12.2
     entrypoint: sh
     args: ["/workspace/cloudbuild/scripts/tf-apply.sh", "${BRANCH_NAME}"]
-logsBucket: gs://blackpaw-build-logs
+logsBucket: gs://blackpaw-build-logs/infra
 timeout: 2000s
