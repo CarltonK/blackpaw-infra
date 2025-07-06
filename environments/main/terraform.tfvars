@@ -15,7 +15,11 @@ project_services = [
   "firebase.googleapis.com",
   "firestore.googleapis.com",
   "secretmanager.googleapis.com",
-  "cloudfunctions.googleapis.com"
+  "cloudfunctions.googleapis.com",
+  "firebaseextensions.googleapis.com",
+  "cloudscheduler.googleapis.com",
+  "eventarc.googleapis.com",
+  "run.googleapis.com"
 ]
 ops_users = [
   "adrian@blackpawinnovations.com",
