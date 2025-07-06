@@ -41,3 +41,23 @@ resource "google_project_iam_member" "ops_user_roles" {
   role    = each.value.role
   member  = "user:${each.value.user}"
 }
+
+# Build SA
+data "google_service_account" "build_service_account" {
+  account_id = "terraform-agent"
+  project    = var.project_id
+}
+
+# Cloud Functions SA
+resource "google_service_account" "cloud_functions_sa" {
+  project      = var.project_id
+  account_id   = "cloud-functions-deployer"
+  display_name = "Cloud Functions Deployer SA"
+}
+
+resource "google_project_iam_member" "cloud_functions_sa_binding" {
+  project = var.project_id
+  count   = length(var.cloud_functions_sa_roles)
+  role    = var.cloud_functions_sa_roles[count.index]
+  member  = "serviceAccount:${google_service_account.cloud_functions_sa.email}"
+}

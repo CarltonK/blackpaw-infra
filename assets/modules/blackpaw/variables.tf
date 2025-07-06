@@ -45,3 +45,15 @@ variable "ops_roles" {
     "roles/compute.admin"
   ]
 }
+
+variable "cloud_functions_sa_roles" {
+  type = list(string)
+  default = [
+    "roles/pubsub.publisher",
+    "roles/secretmanager.secretAccessor",
+    "roles/iam.serviceAccountUser",
+    "roles/firebase.developAdmin",
+    "roles/serviceusage.serviceUsageConsumer",
+    "roles/firebasecloudmessaging.admin"
+  ]
+}
