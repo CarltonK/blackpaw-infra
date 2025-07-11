@@ -1,4 +1,6 @@
 #!/bin/bash
+# Install unzip
+apt install unzip
 
 # Set the target directory for unzipping
 TARGET_DIR="/opt/odoo/addons"
